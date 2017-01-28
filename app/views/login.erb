@@ -1,0 +1,18 @@
+<h1>Bienvenido a Maraton!</h1>
+<h2>Ingresa tus datos para iniciar sesiòn</h2>
+<% if @user_message %>
+<p> <%= @user_message %> </p>
+<% end %>
+<form method="post" action="/play">
+  <p>Ingresa tu email:</p>
+  <input type="email" name="email">
+  <p>Ingresa tu contraseña:</p>
+  <input type="password" name="password">
+  <br>
+  <br>
+  <input type="submit" name="submit">
+</form>
+<hr>
+<hr>
+
+  

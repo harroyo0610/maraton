@@ -1,0 +1,5 @@
+<h1>Hello deck</h1>
+<% @deck.each do |card| %>
+<p> <%= card.question %> </p>
+    <%  p ans = Card.find_by(deck_id: card.id) %>
+<% end %>
