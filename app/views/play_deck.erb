@@ -1,5 +1,13 @@
 <h1>Hello deck</h1>
-<% @deck.each do |card| %>
-<p> <%= card.question %> </p>
-    <%  p ans = Card.find_by(deck_id: card.id) %>
+<form action = "/results_round">
+<% @deck.each_with_index do |card, index| %>
+  <p> <%= card.question %> </p>
+  <% ans = Answer.find_by(card_id: card.id) %>
+  <fieldset>
+    <input type="radio" name="<%= card.id %>" value="<%= ans.option_a %>" > <%= ans.option_a %> <br>
+    <input type="radio" name="<%= card.id %>" value="<%= ans.option_b %>" > <%= ans.option_b %> <br>
+    <input type="radio" name="<%= card.id %>" value="<%= ans.option_c %>" > <%= ans.option_c %> <br>
+  </fieldset>
 <% end %>
+  <input type="submit">
+</form>

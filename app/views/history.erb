@@ -1,0 +1,11 @@
+<h1>Aqui veras tu historial: <%= @user_name.email %></h1>
+
+<% @array_rounds.each_with_index do |round, index| %>
+  <h3> Ronda <%="#{index+1}"%>: </h3>
+  <h4>Respues Correctas: <%= round.answers_correct %></h4>
+  <h4>Respues Incorrectas: <%= round.answers_incorrect %></h4>
+<% end %>
+
+<form action="/logout">
+    <input type="submit" value="Logout">
+</form>

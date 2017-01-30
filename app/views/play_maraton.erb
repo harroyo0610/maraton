@@ -1,4 +1,4 @@
-<h1>Bienvenido a jugar Maratòn</h1>
+<h1>Bienvenido a jugar Maratòn <%= User.find_by(id: @user_name).email %></h1>
 <h2>Elige alguno de los siguientes Decks para jugar</h2>
 <form method="post" action="/play/deck">
   <input type ="submit" name="geografia" value="Geografia">

@@ -4,8 +4,6 @@ class CreateRounds < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.belongs_to :deck, index: true
       t.belongs_to :guess, index: true
-      t.integer :answers_correct
-      t.integer :answers_incorrect
 
       t.timestamps
     end
